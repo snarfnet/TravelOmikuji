@@ -49,5 +49,8 @@ targets:
           UIApplicationSupportsMultipleScenes: false
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
         GADApplicationIdentifier: "ca-app-pub-9404799280370656~7157941495"
         NSUserTrackingUsageDescription: "パーソナライズ広告のためにデータを使用します"
