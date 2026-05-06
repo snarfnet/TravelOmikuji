@@ -349,8 +349,8 @@ private struct Sunburst: Shape {
             let start = Double(index) * .pi / 16
             let end = start + .pi / 32
             path.move(to: center)
-            path.addLine(to: CGPoint(x: center.x + cos(start) * inner, y: center.y + sin(start) * inner))
-            path.addLine(to: CGPoint(x: center.x + cos(end) * outer, y: center.y + sin(end) * outer))
+            path.addLine(to: CGPoint(x: center.x + CGFloat(cos(start)) * inner, y: center.y + CGFloat(sin(start)) * inner))
+            path.addLine(to: CGPoint(x: center.x + CGFloat(cos(end)) * outer, y: center.y + CGFloat(sin(end)) * outer))
             path.addLine(to: center)
         }
         return path
