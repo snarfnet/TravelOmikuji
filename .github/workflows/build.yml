@@ -88,8 +88,7 @@ jobs:
           --apiIssuer 2be0734f-943a-4d61-9dc9-5d9045c46fec \
           --verbose 2>&1 || true
 
-    # Submit manually after confirming in ASC
-    # - name: Install PyJWT
-    #   run: pip3 install --break-system-packages PyJWT requests
-    # - name: Submit for Review
-    #   run: python3 scripts/submit.py ${{ env.BUILD_NUM }}
+    - name: Install PyJWT
+      run: pip3 install --break-system-packages PyJWT requests
+    - name: Submit for Review
+      run: python3 scripts/submit.py ${{ env.BUILD_NUM }}

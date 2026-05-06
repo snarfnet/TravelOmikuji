@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 class WikiInfo: ObservableObject {
     @Published var description: String?
@@ -50,9 +51,8 @@ class TravelViewModel: ObservableObject {
     }
 
     private func fetchWikiInfo(for town: Town) {
-        let query = "\(town.name) \(town.prefecture)"
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let urlStr = "https://ja.wikipedia.org/api/rest_v1/page/summary/\(town.name)"
+        let query = town.name.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? town.name
+        let urlStr = "https://ja.wikipedia.org/api/rest_v1/page/summary/\(query)"
         guard let url = URL(string: urlStr) else { return }
 
         var request = URLRequest(url: url)
