@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python3 -c \\\"\\nimport jwt, time, requests, os\\nhome = os.path.expanduser('~')\\np8 = open(os.path.join(home, '.appstoreconnect', 'private_keys', 'AuthKey_WDXGY9WX55.p8')).read()\\ntoken = jw...",
+  "error": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 26, in <module>\r\n    print(f'{name}: v{ver} \\u2014 {state}')\r\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nUnicodeEncodeError: 'cp932' codec can't encode character '\\u2014' in position 16: illegal multibyte sequence",
+  "timestamp": "2026-05-09T00:11:56.675Z",
+  "retry_count": 1
+}
